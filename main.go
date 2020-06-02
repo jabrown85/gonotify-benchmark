@@ -20,7 +20,7 @@ func main() {
 		select {
 		case ei := <-c:
 			info, _ := os.Stat(ei.Path())
-			log.Printf("Duration for %s(%s): %s", ei.Path(), ei.Event().String(), time.Since(info.ModTime()))
+			log.Printf("NEWPR: Duration for %s(%s): %s", ei.Path(), ei.Event().String(), time.Since(info.ModTime()))
 		}
 	}
 }
